@@ -1,0 +1,48 @@
+body{
+  background-image: url('./img/main-fondo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+nav{
+  width: 85%;
+  margin: 10px auto;
+  background-color: #309f20;
+} 
+
+.container{
+  background-color: rgba(200,200,200,0.9);
+  padding: 0 10px 0 10px;
+  width: 85%;
+  border-radius: 8px;
+}
+.brand-logo{
+  position: relative;
+  display: inline !important;
+  left: 10px !important;
+  transform: none !important;
+}
+.numProd {
+	display: block;
+	color: white;
+	width: 18px;
+	height: 18px;
+	border-radius: 9px;
+  background-color: red;
+  padding: 3px; 
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 12px;
+  line-height: 10px;
+}
+.buttonToolbar{
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonToolbar button{
+  margin: auto;
+  display: block;
+}
