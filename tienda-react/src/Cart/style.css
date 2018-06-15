@@ -1,0 +1,22 @@
+.imagen{
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.imagen img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+  .imagen img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.list-group-item{
+  padding: 5px;
+}
+.list-group-item p, h3{
+  margin: 7px 0;
+}
