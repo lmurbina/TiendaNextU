@@ -1,0 +1,92 @@
+.imagen{
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.imagen img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+  .imagen img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.content-item{
+  border: 1px solid #535353;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+button.primary{
+  background-color: #0a3991;
+}
+button.info{
+  background-color: #4295f0
+}
+.content-item button{
+  padding: 2px;
+  height: 25px;
+  line-height: 15px;
+  color: #f4f4f4;
+}
+.content-item input[type='number']{
+  height: 25px;
+  margin-bottom: 0px;
+}
+.col{
+  padding: 0 0.2rem !important;
+}
+.row{
+  margin: 0 !important;
+}
+.busqueda label{
+  font-size: 16px;
+  color: #0a0afc;
+}
+.busqueda input{
+  background-color: rgb(230, 228, 225);
+  padding-left: 5px;
+  border-radius: 4px;
+}
+.busqueda input::placeholder{
+  color: rgb(39, 113, 173);
+  opacity: 1;
+}
+.Modal{
+  width: 500px;
+  height: 600px;
+  display: block;
+  position: relative;
+  margin: 50px auto;
+  padding: 10px;
+  border: 2px solid #04e72a;
+  border-radius: 8px;
+  background-color: rgb(222, 245, 238); 
+  box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}
+.Modal .imagen-modal{
+  height: 250px ;
+  width: 475px;
+}
+.Modal .imagen-modal img{
+  width: 100%;
+  height: auto;
+}
+@supports(object-fit: cover){
+  .Modal .imagen-modal img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.Modal button{
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+  background-color: #0a8ae9;
+  color: white;
+
+}
