@@ -1,0 +1,40 @@
+
+
+Para iniciar 
+  * npm install -g create-react-app
+
+Ahora creamos nuestro proyecto
+  * create-react-app tienda-react2
+
+Podemos probar que nuestro proyecto esta bien
+  * npm start o npm test
+
+Ahora necesitamos un par de librerias
+  * npm install firebase react-router-dom
+
+Ahora cremos los componentes que vamoa a utilizar siguiendo la estructura
+  > src
+    > Cart
+      - Item.js
+      - List.js
+    > Firebase
+      - auth.js      para las funciones
+      - db.js        para las consultas
+      - firebase.js  Para la configuracion de la bd
+      - index.js     Para unir y enlazar los componentes en un solo lugar
+    > Products
+      - Detail.js
+      - Item.js
+      - List.js
+      - Search.js
+    > Views
+      - CartShopPage.js
+      - LoginPage.js
+      - MainPage.js
+      - TopBar.js
+
+en package.json modifico lo siguiente
+"start": "set PORT=2000 && react-scripts start",
+
+para el modal del detalle del producto instale
+  * npm install react-modal
