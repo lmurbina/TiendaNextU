@@ -1,0 +1,27 @@
+
+.content{
+  width: 45%;
+  padding: 10px;
+  background-color: rgba(200,200,200,0.9);
+  margin: 100px auto 0 auto;
+  text-align: center;
+  border-radius: 10px;
+}
+.content input{
+  background-color: aliceblue;
+  border: 1px solid #444343;
+  border-radius: 5px;
+  padding-left: 5px;
+  width: 98% !important; 
+}
+.content input::placeholder{
+  color: #383838;
+  opacity: 1;
+}
+.content button {
+  width: 98%;
+  height: 35px;
+}
+.content label{
+  font-size: 16px;  
+}
