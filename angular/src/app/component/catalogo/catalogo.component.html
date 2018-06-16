@@ -1,0 +1,77 @@
+
+<div class="container">
+  <div class="busqueda">
+    <div class="row">
+      <div class="col s6">
+        <h4>Catálogo de productos</h4>
+      </div>
+      <div class="col s3 offset-s3">
+        <label for="">¿Que estas buscando?</label>
+        <input type="text" id="buscador" placeholder="aguacate" (input)="filtrarCatalogo(buscar.value)"  #buscar>
+      </div>
+    </div>
+  </div>
+  <hr/>  
+  <div class="catalogo">
+    <div class="row">
+      <div class="col s3" *ngFor="let item of listaProductos">
+        <div class="producto" >
+          <div class="imagen">
+            <img src="../../assets/img/{{item.imagen}}" alt="...">
+          </div>
+          <span class="title" >{{item.nombre}}</span> 
+          <div>
+            <p><b>Precio: </b>{{item.precio | currency : 'USD' : 1-0-2}}</p>
+            <p><b>Disponibles: </b>{{item.disponible ? item.disponible : 'Agotado'}}</p>
+          </div>
+          <div class="botones-cont">
+            <a (click)="verMas(item)" class="vermas" role="button">Ver más</a>
+            <div class="anadir-cont">
+              <a class="add" role="button" (click)="addCanasta(item, cantidad.value)">Añadir</a>
+              <input type="number" value="1" min="1" max="{{item.disponible}}" [disabled]="(item.disponible <= 0)" #cantidad>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+
+<!--
+<div class="row">
+  <div class="container">
+    <div class="busqueda">
+      <div class="pull-left"><h4>Catalogo de Productos</h4></div>
+      <div class="pull-right">
+        <form [formGroup]="formulario" (onSubmit)="preventDefault(e)">  
+          <label for="descripcion"> ¿Qué esta buscando? </label>
+          <input type="text" formControlName="descripcion" id="descripcion" placeholder="aguacate">          
+         </form>
+      </div>
+    </div>
+    <div class="catalogo">
+      <div class="producto col s3" *ngFor="let item of listaProductos">
+        <div class="card">
+          <div class="card-image">
+            <img src="../../assets/img/{{item.imagen}}">                       
+          </div>
+          <span class="card-title" >{{item.nombre}}</span> 
+          <div class="card-content">
+            <small><b>Precio: </b>{{item.precio | currency : 'USD' : 1-0-2}}</small><br>
+            <small><b>Disponibles: </b>{{item.disponible ? item.disponible : 'Agotado'}}</small>
+          </div>
+          <div class="input-group">
+            <div class="box footer">
+              <a [routerLink]="['', item.id]" class="btn btn-secundary">Ver Mas</a>
+            </div>
+            
+            <input type="number" [value]="1" [disabled]="(item.disponible <= 0)" min="0" max={{item.disponible}} class="form-control text-right" id="disponible">
+            <button class="btn btn-warning" type="button" [disabled]="(item.disponible <= 0)">Añadir</button>
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
