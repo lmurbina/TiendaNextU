@@ -1,0 +1,139 @@
+
+
+#carrito{
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 10px auto;
+  width: 80%;
+  height: 700px;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 5px;
+}
+.cabecera{
+  height: 60px;
+  width: 95%;
+  padding: 5px;
+  margin: 0 auto;
+  border-bottom: 1px solid #006980;
+}
+.titulo{
+  margin-top: 0;
+}
+.detalle-carrito{
+  width: 95%;
+  padding: 5px;
+  margin: 0 auto;
+  height: 500px;
+  overflow-y: scroll;
+}
+.lista{
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+li{
+  height: 120px;
+  border: 1px solid #fd8309;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+li .itemdata{
+  height: 85px;
+}
+.imagen{
+  float: left;
+  width: 30%;
+  height: 100%;
+}
+.imagen img{
+  border: 1px solid #fd8309;
+  padding: 2px;
+  width: 100%;
+}
+@supports(object-fit: cover){
+  .imagen img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+.detalle-item{
+  float: right;
+  width: 65%;
+  height: 100%;
+}
+.detalle-item p{
+  margin: 5px 0;
+}
+.subtotal{
+  display: block;
+  margin-top: 3px;
+  height: 30px;
+}
+.btn-floating{
+  float: right;
+  top:  -60px;
+  margin-bottom: -60px
+}
+.subtotal p{
+  margin: 5px 0;
+  text-align: center
+}
+.total{
+  width: 38%;
+  height: 100%;
+  float: right;
+}
+.boton{
+  background-color: #00ff40;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #004000;
+  font-weight: bold;
+  display: block;
+  padding: 5px;
+  width: 70px;
+  text-align: center;
+  float: left;
+  height: 20px;
+  margin:  10px 2.5%;
+  font-size: 0.8em;
+  cursor: pointer;
+  line-height: 0.6em;
+}
+a:hover{
+  box-shadow: 0 0 2px 2px #555555;
+  text-shadow: 1px 1px 2px #12f71d;
+  color: #f7f7f7;
+}
+.info{
+  background-color: #228e96;
+}
+.success{
+  background-color: #18dc1e;
+}
+.danger{
+  background-color: #be2514;
+}
+.progressBar img{
+  width: 120px;
+  margin: 10px auto;
+}
+.alertaUp{
+  font-family: 'Kaushan Script', cursive;
+  color: red;
+  border: 1px solid #be0d03;
+  background-color: rgba(240, 209, 151, 0.9);
+  padding: 8px;
+  display: flex;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
