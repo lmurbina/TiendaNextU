@@ -1,0 +1,11 @@
+url git
+https://github.com/lmurbina/TiendaNextU.git
+
+para la tienda angular
+demo@demo.com
+12345
+
+para la tienda react
+demo@demo.com
+demo12345
+
