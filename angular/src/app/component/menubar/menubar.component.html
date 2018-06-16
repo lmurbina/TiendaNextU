@@ -1,0 +1,14 @@
+<!--<p>
+  menubar works!
+</p>-->
+<nav>
+  <div class="navbar">
+    <div class="title">La Bodega</div>
+    <ul class="menu">
+      <li><a [routerLink]="['catalogo']"><img src="../../../assets/img/ic_dashboard_black_24px.svg" /></a></li>
+      <li><a [routerLink]="['carrito']"><img src="../../../assets/img/ic_shopping_cart_black_24px.svg" /></a><span *ngIf="carShoping.length >= 0"  class="numProd">{{carShoping.length}}</span></li>
+      <li><a><img src="../../../assets/img/ic_credit_card_black_24px.svg" /></a></li>
+      <li><a (click)="cerrarSesion()"><img src="../../../assets/img/ic_exit_to_app_black_24px.svg" /></a></li>
+    </ul>
+  </div>
+</nav>
