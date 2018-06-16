@@ -1,0 +1,42 @@
+
+<div id="carrito">
+  <div class="cabecera">
+    <h2 class="titulo">Carrito de compras</h2>
+  </div>
+  <div class="detalle-carrito">
+    <div class="lista">
+      <ul>
+        <li *ngFor="let caritem of carItems">
+          <div class="itemdata">
+            <div class="imagen">
+              <img src="../../../assets/img/{{caritem.item.imagen}}">
+            </div>
+            <div class="detalle-item">
+              <p><b>{{caritem.item.nombre}}</b></p>
+              <p><b>Unidades: </b>{{caritem.cantidad}}</p>
+              <p><b>Precio: </b>{{caritem.item.precio}}</p>
+            </div>
+          </div>
+          <div class="subtotal">
+            <p><b>Subtotal: </b>{{caritem.item.precio * caritem.cantidad |  currency : 'USD' : 1-0-2}}</p>
+          </div>          
+          <a class="btn-floating btn-large waves-effect waves-light red" (click)="quitarItem(caritem.item.id);"><i class="material-icons">delete_sweep</i></a>        
+        </li>
+      </ul>
+    </div>
+    <div class="total">
+      <div>
+        <h2 class="titulo"><b>Total: </b>{{total |  currency : 'USD' : 1-0-2}}</h2>
+      </div>
+      <div>
+        <a class="boton info" [routerLink]="['../catalogo']">Cancelar</a>
+        <a class="boton success" (click)="pagar();">Pagar</a>
+        <a class="boton danger" (click)="vaciar();">Vaciar</a>
+      </div>
+      <div class="progressBar">
+        <img src="../../../assets/img/progress_bar.gif" alt="" *ngIf="loading">
+      </div>
+      <div *ngIf="error" class="alertaUp">{{error}}</div>
+    </div>
+  </div>
+</div>
